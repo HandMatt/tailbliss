@@ -1,10 +1,14 @@
+:root {
+    --base-url: url('{{ .Site.BaseURL }}');
+}
+
 /* assets */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @font-face {
   font-family: "Quicksand";
-  src: url("../fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+  src: var(--base-url, '/') 'assets/fonts/Quicksand-VariableFont_wght.ttf' format("truetype");
 }
 
 body {
