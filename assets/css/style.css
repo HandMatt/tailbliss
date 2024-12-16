@@ -1,3 +1,7 @@
+:root {
+  --base-url: url('{{ .Site.BaseURL }}');
+}
+
 /* assets */
 
 *, ::before, ::after {
@@ -3560,7 +3564,7 @@ video {
 @font-face {
   font-family: "Quicksand";
 
-  src: url("../fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+  src: var(--base-url, '/') 'assets/fonts/Quicksand-VariableFont_wght.ttf' format("truetype");
 }
 
 body {
